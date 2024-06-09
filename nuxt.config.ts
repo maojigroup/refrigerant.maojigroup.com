@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   site: {
     url: 'https://refrigerant.maojigroup.com',
+    trailingSlash: true,
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -14,16 +15,8 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github-pages',
     prerender: {
-      routes: [
-        '/products/r22',
-        '/products/r32',
-        '/products/r404a',
-        '/products/r407c',
-        '/products/r410a',
-        '/products/r507',
-        '/products/r1234yf',
-        '/products/r134a',
-      ],
+      crawlLinks: true,
+      routes: ['/sitemap.xml'],
     },
   },
   content: {},
