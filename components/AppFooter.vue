@@ -28,7 +28,9 @@
         </div>
       </div>
 
-      <div class="mt-8 text-neutral-500">&copy;2018 MAOJI GROUP</div>
+      <div class="mt-8 text-neutral-500">
+        &copy; 2024 MAOJI GROUP Copyright, All Rights Reserved.
+      </div>
     </footer>
   </div>
 </template>
