@@ -4,11 +4,11 @@
   <div class="mt-8 bg-black text-center text-xs text-neutral-400 md:mt-16">
     <footer class="container py-8 md:pt-16">
       <div
-        class="grid grid-cols-1 justify-items-center gap-x-16 gap-y-4 md:grid-cols-3"
+        class="grid grid-cols-1 justify-items-center gap-x-16 gap-y-4 md:grid-cols-[auto,minmax(0,1fr)]"
       >
-        <img class="h-8" src="/certs.png" alt="" />
+        <img class="h-8 md:h-12" src="/certs.png" alt="" />
 
-        <div class="space-y-2 md:col-span-2 md:text-start">
+        <div class="space-y-2 md:text-start">
           <p>
             Address: ZHONGSHAN DONG ROAD#2388 YINTAI BUILDING ROOM 602 YINZHOU
             AREA, NINGBO CITY 315100,CHINA

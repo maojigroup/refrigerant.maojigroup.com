@@ -14,7 +14,7 @@ const ABOUT_CONFIG = [
 
 <template>
   <div>
-    <div class="relative mb-20">
+    <div class="relative mb-10">
       <div class="pointer-events-none absolute inset-0">
         <img
           class="size-full object-cover"
@@ -26,15 +26,8 @@ const ABOUT_CONFIG = [
       </div>
 
       <div
-        class="container relative z-10 grid grid-cols-1 items-center gap-12 py-12 lg:grid-cols-2"
+        class="container relative z-10 grid grid-cols-1 items-center gap-12 py-12 lg:grid-cols-2 lg:py-20"
       >
-        <img
-          class="h-auto w-1/2 min-w-48 max-w-[400px] justify-self-center lg:order-last lg:w-auto lg:translate-y-24 lg:justify-self-end"
-          src="/product/r1234yf.png"
-          role="presentation"
-          alt=""
-        />
-
         <div class="text-center text-lg sm:text-xl lg:text-start lg:text-2xl">
           <div class="mb-6 text-white">
             MAOJI offers worldwide delivery of top-quality refrigerants R1234yf,
@@ -88,7 +81,7 @@ const ABOUT_CONFIG = [
         <div
           v-for="(item, i) of ABOUT_CONFIG"
           :key="i"
-          class="relative flex aspect-[5/2] max-h-[455px] w-full items-center text-sm text-white even:justify-end"
+          class="relative flex aspect-[5/2] max-h-[455px] w-full items-center text-white even:justify-end"
         >
           <img
             class="absolute inset-0 h-full w-full object-cover"
@@ -97,7 +90,11 @@ const ABOUT_CONFIG = [
             alt=""
           />
           <div class="absolute inset-0 bg-black/50"></div>
-          <p class="relative mx-12 my-4 sm:w-1/2 lg:w-1/3">{{ item }}</p>
+          <p
+            class="relative mx-12 my-4 text-sm md:w-1/2 md:text-base lg:w-1/3 lg:text-xl"
+          >
+            {{ item }}
+          </p>
         </div>
       </div>
     </div>

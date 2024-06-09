@@ -3,7 +3,7 @@ const NAV_LINKS = [
   { title: 'Home', url: '/' },
   { title: 'Products', url: '/products/' },
   { title: 'Contact', url: '/contact/' },
-  { title: 'About', url: '/#about-us' },
+  { title: 'About Us', url: '/#about-us' },
 ];
 </script>
 
@@ -15,7 +15,6 @@ const NAV_LINKS = [
       <img
         class="h-6 w-auto lg:h-8"
         src="/logo@1x.png"
-        srcset="/logo@2x.png 2x"
         width="673"
         height="60"
         alt="MAOJI GROUP | MAOJI gas"
@@ -59,12 +58,13 @@ const NAV_LINKS = [
           </headless-menu-items>
         </transition>
       </headless-menu>
-      <nav class="hidden space-x-10 uppercase md:block">
+      <nav class="hidden space-x-3 uppercase md:block">
         <router-link
           v-for="(link, i) of NAV_LINKS"
           :key="i"
+          class="rounded bg-neutral-100 px-4 py-2 hover:text-primary-500"
           :to="link.url"
-          class="hover:text-primary-500"
+          :active-class="link.url.includes('#') ? '' : 'text-primary-500'"
           >{{ link.title }}</router-link
         >
       </nav>
