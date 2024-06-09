@@ -19,6 +19,10 @@ useHead({
 </template>
 
 <style>
+body {
+  min-width: 320px;
+}
+
 .container {
   @apply mx-auto px-4 lg:px-8;
 }

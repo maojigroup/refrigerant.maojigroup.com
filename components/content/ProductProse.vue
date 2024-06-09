@@ -9,3 +9,11 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+:deep(table) {
+  thead:not(:has(th:not(:empty))) {
+    display: none;
+  }
+}
+</style>
