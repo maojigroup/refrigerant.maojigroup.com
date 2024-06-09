@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  name: 'home',
+});
 useHead({
   title: 'Home',
 });
@@ -36,12 +39,12 @@ const ABOUT_CONFIG = [
           </div>
 
           <div>
-            <router-link
+            <SiteLink
               class="inline-flex items-center rounded-lg bg-primary-500 px-4 py-2 text-white hover:bg-primary-600 active:bg-primary-700 lg:px-6 lg:py-4"
               to="/products"
             >
               View Products
-            </router-link>
+            </SiteLink>
           </div>
         </div>
       </div>
@@ -53,21 +56,21 @@ const ABOUT_CONFIG = [
       </h2>
 
       <div class="space-y-8 lg:space-y-12">
-        <router-link class="block" to="/products/r1234yf">
+        <SiteLink class="block" to="/products/r1234yf">
           <img
             class="aspect-[1440/804] w-full"
             src="/hotsales-1.jpg"
             alt="R-1234yf"
           />
-        </router-link>
+        </SiteLink>
 
-        <router-link class="block" to="/products/r134a">
+        <SiteLink class="block" to="/products/r134a">
           <img
             class="aspect-[1440/804] w-full"
             src="/hotsales-2.jpg"
             alt="R-134a"
           />
-        </router-link>
+        </SiteLink>
       </div>
 
       <h2

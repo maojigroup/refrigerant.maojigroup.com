@@ -3,7 +3,7 @@ const NAV_LINKS = [
   { title: 'Home', url: '/' },
   { title: 'Products', url: '/products/' },
   { title: 'Contact', url: '/contact/' },
-  { title: 'About Us', url: '/#about-us' },
+  { title: 'About Us', url: '/#about-us', active: false },
 ];
 </script>
 
@@ -22,7 +22,7 @@ const NAV_LINKS = [
 
       <headless-menu as="div" class="relative md:hidden">
         <div>
-          <headless-menu-button>
+          <headless-menu-button aria-label="Menu">
             <Icon class="!block" name="material-symbols:menu" size="24px" />
           </headless-menu-button>
         </div>
@@ -44,14 +44,17 @@ const NAV_LINKS = [
                 :key="i"
                 v-slot="{ active, close }"
               >
-                <router-link
+                <SiteLink
                   class="block w-full rounded-md px-2 py-2 text-sm"
                   :class="[
                     active ? 'bg-primary-500 text-white' : 'text-gray-900',
                   ]"
                   :to="link.url"
+                  :active-class="
+                    link.active === false ? '' : 'text-primary-500'
+                  "
                   @click.capture="close"
-                  >{{ link.title }}</router-link
+                  >{{ link.title }}</SiteLink
                 >
               </headless-menu-item>
             </div>
@@ -59,13 +62,13 @@ const NAV_LINKS = [
         </transition>
       </headless-menu>
       <nav class="hidden space-x-3 uppercase md:block">
-        <router-link
+        <SiteLink
           v-for="(link, i) of NAV_LINKS"
           :key="i"
           class="rounded bg-neutral-100 px-4 py-2 hover:text-primary-500"
           :to="link.url"
-          :active-class="link.url.includes('#') ? '' : 'text-primary-500'"
-          >{{ link.title }}</router-link
+          :active-class="link.active === false ? '' : 'text-primary-500'"
+          >{{ link.title }}</SiteLink
         >
       </nav>
     </header>

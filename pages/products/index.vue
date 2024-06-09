@@ -59,7 +59,7 @@ const PRODUCT_CONFIG: { title: string; name: string; img?: string }[][] = [
         :key="i"
         class="col-span-full grid grid-cols-subgrid"
       >
-        <router-link
+        <SiteLink
           v-for="(product, j) of row"
           :key="j"
           class="text-primary-500 hover:text-primary-600"
@@ -71,7 +71,7 @@ const PRODUCT_CONFIG: { title: string; name: string; img?: string }[][] = [
             alt=""
           />
           <div class="text-center lg:text-lg">{{ product.title }}</div>
-        </router-link>
+        </SiteLink>
       </div>
     </div>
   </div>
